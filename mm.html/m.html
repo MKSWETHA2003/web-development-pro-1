@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+      
+body {
+    background-image:url('C:\mm\images\1.img');
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.mm{
+    height: 1400px;
+    width: 1500px;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    max-height: 1563px;
+    background-image:url('C:\mm\images\1.img');
+}
+
+.pricing-container h1{
+    font-size:75px;
+    color: darkgrey;
+}
+
+
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 28px;
+    grid-gap: 147px;
+}
+
+.card h2{
+    font-size:57px;
+    color:blue;
+}
+
+.card {
+    background-color:paleturquoise;
+    border: 1px solid #336cd8;
+    border-radius: 8px;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.CARD BUTTON{
+    HEIGHT: 31PX;
+    WIDTH: 203PX;
+    BACKGROUND-COLOR: BROWN;
+    COLOR: WHITE
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.price  {
+    font-size: 40px;
+    color: #333;
+    margin: 30px 0;
+}
+
+.price span {
+    font-size: 16px;
+    color: #777;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-select {
+    background-color: BLUEVIOLET;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-select:hover {
+    background-color: #218838;
+}
+
+#selected-plan {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+    </style>
+</head>
+<body>
+
+<div class="pricing-container">
+    <h1>PRICING PLANS</h1>
+    <h3>Simple,Honest,Affordable,Pricing</h3>
+
+<div class="pricing-cards">
+  <div class="card">
+    <h2>Basic</h2>
+                <p class="price">$15<span>/month</span></p>
+        <button>START FREE TRIAL</button>         
+                <ul>
+                    <h3>5 GB Storage</h3>
+                    <h3>1 Domain</h3>
+                    <h3>24/7 Support</h3>
+                </ul>
+                <button class="btn-select" onclick="selectPlan('Basic')">Select</button>
+            </div>
+    
+<div class="card">
+                <h2>Standard</h2>
+                <p class="price">$19.99<span>/month</span></p>
+                <button>START FREE TRIAL</button>
+                <ul>
+                    <h3>50 GB Storage</h3>
+                    <h3>5 Domains</h3>
+                    <h3>Priority Support</h3>
+                </ul>
+    <button class="btn-select" onclick="selectPlan('Standard')">Select</button>
+            </div>
+
+<div class="card">
+                <h2>Premium</h2>
+     <p class="price">$29.99<span>/month</span></p>
+     <button>START FREE TRIAL</button>
+                <ul>
+                    <h3>100 GB Storage</h3>
+                    <h3>10 Domains</h3>
+                    <h3>Dedicated Support</lih3>
+                </ul>
+                <button class="btn-select" onclick="selectPlan('Premium')">Select</button>
+            </div>
+</div>
+
+        <div id="selected-plan"></div>
+    </div>
+    </div>
+
+<script src="script.js"></script>
+    <script>
+        function selectPlan(plan) {
+    const selectedPlanDiv = document.getElementById('selected-plan');
+    selectedPlanDiv.innerHTML = `YOU HAVE SELECTED A <strong>${plan}</strong> PLAN.`;
+    WINDOW.ALERT("DO YOU WANT TO GET ANSWER")
+}
+    </script>
+</body>
+</html>
